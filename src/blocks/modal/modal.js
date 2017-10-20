@@ -1,12 +1,10 @@
 /* ========================================================================
- * Основано на Bootstrap: modal.js v3.3.7
+ * Модальное окно. Основано на Bootstrap: modal.js v3.3.7
  * Изменения минимальны: имена классов, событий, методов...
  * ========================================================================
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
-
-
 +function ($) {
   'use strict';
 
@@ -65,7 +63,9 @@
     this.checkScrollbar()
     this.setScrollbar()
     // this.$body.addClass('modal-open')
+	$("body").css("width", $("body").width())
     this.$body.addClass('js-modal-open')
+	
 
     this.escape()
     this.resize()
@@ -90,7 +90,7 @@
 
       that.$element
         // .show()
-        .css('display', 'flex')
+        .css('display', 'block')
         .scrollTop(0)
 
       that.adjustDialog()
@@ -192,6 +192,7 @@
     this.$element.hide()
     this.backdrop(function () {
       that.$body.removeClass('js-modal-open')
+	  $("body").css("width", 'auto')
       that.resetAdjustments()
       that.resetScrollbar()
       // that.$element.trigger('hidden.bs.modal')
@@ -367,3 +368,7 @@
   })
 
 }(jQuery);
+
+$(window).on("load", function() {
+	$(".page-footer").after($(".modal"));
+});

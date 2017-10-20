@@ -24,6 +24,47 @@ const size = require('gulp-size');
 const del = require('del');
 const newer = require('gulp-newer');
 
+const smartgrid = require('smart-grid');
+
+// Настройка SmartGrid
+var smartgridSettings = {
+    outputStyle: 'scss', /* less || scss || sass || styl */
+    columns: 12, /* number of grid columns */
+    offset: '30px', /* gutter width px || % */
+    mobileFirst: false, /* mobileFirst ? 'min-width' : 'max-width' */
+    container: {
+        maxWidth: '1200px', /* max-width оn very large screen */
+        fields: '30px' /* side fields */
+    },
+    breakPoints: {
+        xl: {
+            width: '1200px',
+        },
+        lg: {
+            width: '992px', /* -> @media (max-width: 1100px) */
+        },
+        md: {
+            width: '768px'
+        },
+        sm: {
+            width: '480px'
+            /*fields: '15px'  set fields only if you want to change container.fields */
+        },
+        xs: {
+            width: '0px'
+        }
+        /* 
+        We can create any quantity of break points.
+
+        some_name: {
+            width: 'Npx',
+            fields: 'N(px|%|rem)',
+            offset: 'N(px|%|rem)'
+        }
+        */
+    }
+};
+
 // Получим настройки проекта из projectConfig.json
 let projectConfig = require('./projectConfig.json');
 let dirs = projectConfig.dirs;
@@ -70,6 +111,9 @@ gulp.task('clean', function () {
     '!' + dirs.buildPath + '/readme.md'
   ]);
 });
+
+// Генерация сетки SmartGrid
+gulp.task('smartgrid', () => smartgrid(dirs.srcPath + 'scss/mixins', smartgridSettings));
 
 // Компиляция стилей блоков проекта (и  добавочных)
 gulp.task('style', function () {
@@ -368,7 +412,7 @@ gulp.task('build', function (callback) {
   gulpSequence(
     'clean',
     ['sprite:svg', 'sprite:png'],
-    ['style', 'style:single', 'js', 'copy:css', 'copy:img', 'copy:js', 'copy:fonts'],
+    ['smartgrid', 'style', 'style:single', 'js', 'copy:css', 'copy:img', 'copy:js', 'copy:fonts'],
     'html',
     callback
   );
@@ -390,7 +434,7 @@ gulp.task('serve', ['build'], function() {
   browserSync.init({
     server: dirs.buildPath,
     startPath: 'index.html',
-    open: false,
+    open: true,
     port: 8080,
   });
   // Слежение за стилями
