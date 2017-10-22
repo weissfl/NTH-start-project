@@ -9,6 +9,7 @@ const browserSync = require('browser-sync').create();
 const postcss = require('gulp-postcss');
 const autoprefixer = require("autoprefixer");
 const mqpacker = require("css-mqpacker");
+const sortCSSmq = require('sort-css-media-queries');
 const atImport = require("postcss-import");
 const cleanss = require('gulp-cleancss');
 const inlineSVG = require('postcss-inline-svg');
@@ -34,24 +35,21 @@ var smartgridSettings = {
     mobileFirst: false, /* mobileFirst ? 'min-width' : 'max-width' */
     container: {
         maxWidth: '1200px', /* max-width оn very large screen */
-        fields: '30px' /* side fields */
+        fields: '15px' /* side fields */
     },
     breakPoints: {
-        xl: {
-            width: '1200px',
-        },
         lg: {
-            width: '992px', /* -> @media (max-width: 1100px) */
+            width: '1200px', /* -> @media (max-width: 1100px) */
         },
         md: {
-            width: '768px'
+            width: '992px'
         },
         sm: {
-            width: '480px'
+            width: '768px'
             /*fields: '15px'  set fields only if you want to change container.fields */
         },
         xs: {
-            width: '0px'
+            width: '480px'
         }
         /* 
         We can create any quantity of break points.
@@ -88,7 +86,7 @@ let postCssPlugins = [
     browsers: ['last 2 version']
   }),
   mqpacker({
-    sort: true
+    sort: sortCSSmq.desktopFirst //mobile-first: MsortCSSmq, desktop-first: sortCSSmq.desktopFirst
   }),
   atImport(),
   inlineSVG(),
