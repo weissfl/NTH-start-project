@@ -33,6 +33,7 @@ var smartgridSettings = {
     columns: 12, /* number of grid columns */
     offset: '30px', /* gutter width px || % */
     mobileFirst: false, /* mobileFirst ? 'min-width' : 'max-width' */
+    detailedCalc: false, /* расчет процентов в css или в браузере */
     container: {
         maxWidth: '1200px', /* max-width оn very large screen */
         fields: '15px' /* side fields */
@@ -51,7 +52,7 @@ var smartgridSettings = {
         xs: {
             width: '480px'
         }
-        /* 
+        /*
         We can create any quantity of break points.
 
         some_name: {
