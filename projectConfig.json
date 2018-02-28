@@ -12,7 +12,8 @@
     "form": [],
     "slider": [],
     "field": [],
-    "select": []
+    "select": [],
+    "modal": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

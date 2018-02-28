@@ -2,36 +2,27 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-$font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif !default;
-$font-family--headings:       $font-family !default;
-
-$font-size--h4:               1.25em !default;
-
-$line-height:                 1.375em !default;
-
-$screen-lg:                   992px !default;
-
-$opacity:                     0.7 !default;
-$transition-time:             0.3s !default;
-
-$z-index-modal:               100 !default;
+$opacity: .7 !default;
+$transition-time: .3s !default;
+$z-index-modal: 100 !default;
+$width: 400px;
 
 .js-modal-open {
   overflow: hidden;
 }
 
 .modal {
-
-  $block-name:                &; // #{$block-name}__element
-
-  display: none;
-  overflow: hidden;
   position: fixed;
+  z-index: $z-index-modal;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: $z-index-modal;
+
+  display: none;
+  overflow: hidden;
+
+  $block-name: &; // #{$block-name}__element
   -webkit-overflow-scrolling: touch;
 
   .js-modal-open & {
@@ -41,88 +32,82 @@ $z-index-modal:               100 !default;
 
   &__dialog {
     position: relative;
-    margin: 0;
-    width: 100%;
-    height: 100%;
 
-    @media (min-width: $screen-lg) {
-      width: 600px;
-      height: auto;
+    width: $width;
+    height: auto;
+    margin: 50px auto;
 
-      #{$block-name}--open & {
+    #{$block-name}--open & {
         animation: modal-content-show $transition-time 1 both;
-      }
+    }
+
+    @include xs-block {
+      width: 100%;
+      height: 100%;
+      margin: auto;
     }
   }
 
   &__content {
     position: relative;
+
     display: flex;
     flex-direction: column;
+
     min-width: 100%;
     min-height: 100%;
-    background-color: #fff;
+
+    text-align: center;
+
     outline: 0;
+    background-color: #fff;
   }
 
-  &__header {
-    padding: 5px 40px 0 10px;
-    flex-shrink: 0;
+  &__accord {
+    margin-bottom: 10px;
+
+    font-size: .85em;
+
+    text-align: left;
   }
 
-  &__title {
-    margin-top: ($line-height / 2);
-    margin-bottom: ($line-height / 2);
-    font-size: $font-size--h4;
-    line-height: 1.4;
-    font-weight: 700;
-    color: currentColor;
+  &__links {
+  margin-top: 10px;
+  font-size: .929em;
+
+    a + a {
+      margin-left: 5px;
+    }
   }
+
 
   &__close {
     position: absolute !important;
-    top: 5px;
-    right: 5px;
-  }
+    top: 6px;
+    right: 6px;
 
-  &__body {
-    padding: 0 10px;
-    flex-grow: 1;
-  }
+    cursor: pointer;
 
-  &__footer {
-    padding: 10px;
-    flex-shrink: 0;
+    border: none;
+    background-color: transparent;
+
+    color: $color-primary;
   }
 
   &__backdrop {
     position: fixed;
+    z-index: ($z-index-modal - 1);
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: ($z-index-modal - 1);
+
     background-color: rgba(0, 0, 0, $opacity);
-
-    @media (min-width: $screen-lg) {
-      animation: modal-backdrop-show $transition-time 1;
-    }
-  }
-
-  &--open {
-
-    @media (min-width: $screen-lg) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    animation: modal-backdrop-show $transition-time 1;
   }
 }
 
-
-
 @keyframes modal-backdrop-show {
-
   0% {
     opacity: 0;
   }
@@ -133,14 +118,15 @@ $z-index-modal:               100 !default;
 }
 
 @keyframes modal-content-show {
-
   0% {
-    opacity: 0;
     transform: translateY(-2em);
+
+    opacity: 0;
   }
 
   100% {
-    opacity: 1;
     transform: translateY(0);
+
+    opacity: 1;
   }
 }

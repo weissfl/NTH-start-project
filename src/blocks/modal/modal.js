@@ -65,7 +65,7 @@
     // this.$body.addClass('modal-open')
 	$("body").css("width", $("body").width())
     this.$body.addClass('js-modal-open')
-	
+
 
     this.escape()
     this.resize()
@@ -369,6 +369,6 @@
 
 }(jQuery);
 
-$(window).on("load", function() {
-	$(".page-footer").after($(".modal"));
-});
+// $(window).on("load", function() {
+// 	$(".page-footer").after($(".modal"));
+// });
