@@ -7,7 +7,8 @@
       "__demo"
     ],
     "button": [],
-    "checkbox": []
+    "checkbox": [],
+    "radio-button": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -1,0 +1,67 @@
+// В этом файле должны быть стили для БЭМ-блока radio-button, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.radio-button {
+  //TODO: сделать отобажение фокуса
+  $block-name: &; // #{$block-name}__element
+
+  &__input {
+    @include visually-hidden;
+  }
+
+  &__label {
+    position: relative;
+
+    display: inline-block;
+
+    padding-left: 25px;
+    //line-height: 1.2;
+
+    vertical-align: top;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+
+      content: '';
+
+      border: 1px solid $gray-lighter;
+      border-radius: 50%;
+      background-color: $white;
+    }
+  }
+
+  &__input:checked + &__label::before {
+    border-color: $color-primary;
+  }
+
+  &__input:checked + &__label::after {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+
+    width: 8px;
+    height: 8px;
+
+    content: '';
+
+    border-radius: 50%;
+    background-color: $color-primary;
+  }
+
+  &--nolabel {
+    #{$block-name}__label {
+      padding-left: 16px;
+    }
+
+    #{$block-name}__label::before {
+      margin-right: 0;
+    }
+  }
+}
