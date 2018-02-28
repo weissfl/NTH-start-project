@@ -11,123 +11,192 @@ body {
   font-family: $font-family;
   font-size: $font-size;
   line-height: $line-height;
-  color: $black;
+
+  color: $gray-darker;
 }
 
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   font-family: $font-family--title;
-  font-weight: 700;
+  font-weight: normal;
+  line-height: 1.2;
+
   text-transform: none;
-  line-height: $line-height;
-  color: currentColor;
+
+  color: $gray-darkest;
 }
 
 h1 {
-  font-size: $font-size--h1;
-  margin-top: $line-height;
+  margin-top: ($line-height / 2);
   margin-bottom: ($line-height / 2);
+
+  font-size: $font-size--h1;
 }
 
 h2 {
-  font-size: $font-size--h2;
-  margin-top: $line-height;
+  margin-top: ($line-height);
   margin-bottom: ($line-height / 2);
+
+  font-size: $font-size--h2;
 }
 
 h3 {
-  font-size: $font-size--h3;
-  margin-top: $line-height;
+  margin-top: ($line-height);
   margin-bottom: ($line-height / 2);
+
+  font-size: $font-size--h3;
 }
 
 h4 {
-  font-size: $font-size--h4;
-  margin-top: ($line-height / 2);
+  margin-top: ($line-height / 1.5);
   margin-bottom: ($line-height / 2);
+
+  font-size: $font-size--h4;
+}
+
+h5 {
+  margin-top: ($line-height / 1.5);
+  margin-bottom: ($line-height / 2);
+
+  font-size: $font-size--h5;
+}
+
+h6 {
+  margin-top: ($line-height / 1.5);
+  margin-bottom: ($line-height / 2);
+
+  font-size: $font-size--h6;
 }
 
 
 p {
-  font-size: $font-size;
-  line-height: $line-height;
-  margin-top: ($line-height / 2);
-  margin-bottom: ($line-height / 2);
+  margin: 0;
   padding: 0;
+
+  font-size: 1em;
+  line-height: 1.7;
+}
+
+p + p {
+  margin-top: ($line-height / 2);
 }
 
 ul {
-  font-size: $font-size;
-  line-height: $line-height;
-  list-style-type: circle;
-  margin-top: ($line-height / 2);
-  margin-bottom: ($line-height / 2);
+  margin-top: $line-height;
+  margin-bottom: $line-height;
+  margin-left: 28px;
   padding: 0;
+
+  font-size: 1em;
+  line-height: $line-height;
+
+  list-style-type: disc;
 }
 
 ol {
-  font-size: $font-size;
-  line-height: $line-height;
-  margin-top: ($line-height / 2);
-  margin-bottom: ($line-height / 2);
+  margin-top: $line-height;
+  margin-bottom: $line-height;
+  margin-left: 28px;
   padding: 0;
+
+  font-size: 1em;
+  line-height: $line-height;
 }
 
 li {
+  padding-left: 4px;
+}
+
+li + li {
   margin-top: ($line-height / 2);
-  margin-bottom: ($line-height / 2);
-  padding-left: 10px;
 }
 
 a {
   color: $color-secondary;
+  //text-decoration-skip: ink;
 
-    &:hover {
+  &:hover {
     text-decoration: none;
+  }
+
+  &:visited {
+    color: lighten($color-secondary, 15%);
+  }
+
+  &:active {
+    color: $color-tertiary;
   }
 }
 
 table {
-  font-size: $font-size;
-  border-collapse: collapse;
   width: 100%;
-  margin-top: ($line-height / 2);
-  margin-bottom: ($line-height);
+  margin-top: ($line-height * 1.5);
+  margin-bottom: ($line-height * 1.5);
+
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 13px;
+
+  font-weight: normal;
+
+  text-align: left;
+
+  border: 1px solid $gray-lighter;
 }
 
 tr {
-  border: 1px solid $gray;
+  &:first-child {
+    td,
+    th {
+      text-align: center;
 
-    &:first-child {
-    font-weight: 700;
-    color: $gray;
-    background-color: $gray-lightest;
+      color: $gray-darkest;
+      border: 1px solid $gray-lightest;
+      background-color: $gray-lightest;
+    }
   }
-}
-
-td, th {
-  padding: 20px;
 }
 
 hr {
   display: block;
+
   height: 1px;
-  border: 0;
-  border-top: 1px solid $gray;
+  margin-top: ($line-height * 2);
+  margin-bottom: ($line-height * 2);
   padding: 0;
-  margin-top: ($line-height / 2);
-  margin-bottom: ($line-height);
+
+  border: 0;
+  background: $gray-lighter;
+}
+
+blockquote {
+  margin-top: ($line-height * 2);
+  margin-bottom: ($line-height * 2);
+  padding: 4px 0 4px 19px;
+
+  font-style: italic;
+  line-height: 1.7;
+
+  border-left: 5px solid $color-primary;
 }
 
 .visually-hidden {
   position: absolute;
+
   overflow: hidden;
   clip: rect(0 0 0 0);
-  height: 1px;
+
   width: 1px;
+  height: 1px;
   margin: -1px;
   padding: 0;
+
   border: 0;
 }
