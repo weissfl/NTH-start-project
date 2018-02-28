@@ -10,7 +10,8 @@
     "checkbox": [],
     "radio-button": [],
     "form": [],
-    "slider": []
+    "slider": [],
+    "field": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

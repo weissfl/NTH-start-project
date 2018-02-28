@@ -1,0 +1,22 @@
+// В этом файле должны быть стили для БЭМ-блока field, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.field {
+  display: flex;
+  align-items: center;
+
+  $block-name: &; // #{$block-name}__element
+
+  &--align_textarea {
+    align-items: flex-start;
+  }
+
+  &__label {
+    flex-basis: 205px;
+  }
+
+  &__label + &__input {  //Добавляем элементу отступ, если перед ним идет label
+    margin-left: 10px;
+  }
+}
