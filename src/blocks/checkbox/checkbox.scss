@@ -53,12 +53,6 @@
 
     content: '';
 
-    //width: 12px;
-    //height: 12px;
-    //background-image: svg-load('../blocks/checkbox/img/checkmark.svg');
-    //background-repeat: no-repeat;
-    //background-position: 0 0;
-
     @include sprite($checkmark);
   }
 

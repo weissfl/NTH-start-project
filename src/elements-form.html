@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ru">
+
+@@include('_include/page_head.html', {"title": "Элементы формы"})
+
+<body>
+
+<div style="width: 1170px; margin: 0 auto;">
+
+<h1>Элементы формы</h1>
+
+<div class="field">
+  <label class="field__label" for="">Поле для ввода текста</label>
+  <input class="field__input" type="text" placeholder="Подсказка поля">
+</div>
+
+<br>
+
+<div class="field">
+  <label class="field__label" for="">Поле для ввода текста</label>
+  <input class="field__input  error_input" type="text" placeholder="Подсказка поля">
+</div>
+
+<br>
+
+<div class="field  field--align_textarea">
+  <label class="field__label" for="">Текстовое поле</label>
+  <textarea class="field__input" name="textarea" id="" placeholder="Подсказка поля"></textarea>
+</div>
+
+<br>
+
+<div class="checkbox">
+  <input id="id_1" class="checkbox__input" type="checkbox" checked>
+  <label class="checkbox__label" for="id_1">Чекбокс</label>
+</div>
+
+<div class="checkbox">
+  <input id="id_1.1" class="checkbox__input" type="checkbox">
+  <label class="checkbox__label" for="id_1.1">Чекбокс</label>
+</div>
+
+<div class="checkbox  checkbox--nolabel">
+  <input id="id_1.3" class="checkbox__input" type="checkbox">
+  <label class="checkbox__label" for="id_1.3"></label>
+</div>
+
+<br>
+
+<div class="radio-button">
+    <input id="id_2" class="radio-button__input" name="test" type="radio">
+    <label class="radio-button__label" for="id_2">Радиокнопка</label>
+</div>
+
+<div class="radio-button">
+    <input id="id_3" class="radio-button__input" name="test" type="radio" checked>
+    <label class="radio-button__label" for="id_3">Радиокнопка</label>
+</div>
+
+<div class="radio-button  radio-button--nolabel">
+  <input id="id_4" class="radio-button__input" name="test" type="radio" checked>
+  <label class="radio-button__label" for="id_4"></label>
+</div>
+
+<br>
+
+<button class="button">В корзину</button>
+<input class="button" type="submit" value="В корзину">
+<input class="button" type="button" value="В корзину">
+<a class="button" href="#">В корзину</a>
+
+<br><br>
+
+<button class="button  button--color_tertiary">В корзину</button>
+<input class="button  button--color_tertiary" type="submit" value="В корзину">
+<input class="button  button--color_tertiary" type="button" value="В корзину">
+<a class="button  button--color_tertiary" href="#">В корзину</a>
+
+<br><br>
+
+<button class="button  button--size_big  button--color_tertiary">В корзину</button>
+<input class="button  button--size_big" type="submit" value="В корзину">
+<input class="button  button--size_big  button--color_tertiary" type="button" value="В корзину">
+<a class="button  button--size_big" href="#">В корзину</a>
+
+<br><br>
+
+<div class="select">
+  <div class="select__value"></div>
+  <select>
+    <option>Mustard</option>
+    <option>Ketchup</option>
+    <option>Barbecue</option>
+  </select>
+</div>
+
+<br>
+
+<div class="select  select--size_big">
+  <div class="select__value"></div>
+  <select>
+    <option>Mustard</option>
+    <option>Ketchup</option>
+    <option>Barbecue</option>
+  </select>
+</div>
+
+<br>
+
+<div class="field">
+  <label class="field__label" for="id_10">Селект</label>
+  <div class="field__input  select">
+    <div class="select__value"></div>
+    <select id="id_10">
+      <option>Mustard</option>
+      <option>Ketchup</option>
+      <option>Barbecue</option>
+    </select>
+  </div>
+</div>
+
+<br><br>
+
+<div class="form">
+  <div class="form__header">
+    <h2 class="form__title">Заголовок формы</h2>
+  </div>
+  <form action="">
+    <div class="form__body">
+      <div class="field  form__control">
+        <label class="field__label" for="">Имя</label>
+        <input class="field__input" type="text" placeholder="Подсказка поля">
+      </div>
+      <div class="field  form__control">
+        <label class="field__label" for="">Телефон</label>
+        <input class="field__input" type="tel" placeholder="Подсказка поля">
+      </div>
+      <div class="field  form__control">
+        <label class="field__label" for="">Электронная почта</label>
+        <input class="field__input" type="email" placeholder="Подсказка поля">
+      </div>
+      <div class="field  form__control">
+        <label class="field__label" for="id_10">Выберите что хотите</label>
+        <div class="field__input  select  select--size_big">
+          <div class="select__value"></div>
+          <select id="id_10">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Barbecue</option>
+          </select>
+        </div>
+      </div>
+      <div class="field  field--align_textarea  form__control">
+        <label class="field__label" for="">Примечание</label>
+        <textarea class="field__input" name="textarea" id="" placeholder="Подсказка поля"></textarea>
+      </div>
+    </div>
+
+    <div class="form__footer">
+      <p class="form__note">* — Все поля отмеченне звездочкой обязательны для заполнения</p>
+
+      <div class="checkbox  form__accord">
+        <input id="id_13" class="checkbox__input" type="checkbox">
+        <label class="checkbox__label" for="id_13">Я хочу получать спецпредложения на почту</label>
+      </div>
+
+      <div class="form__accord">
+        Нажимая на кнопку «Отправить форму», я даю согласие на <a href="#">обработку персональных данных</a>
+      </div>
+
+      <button class="button  button--size_big  button--color_tertiary">Отправить форму</button>
+    </div>
+  </form>
+</div>
+
+<br><br>
+
+<a href="#modal-demo" data-toggle="modal">Ссылка для открытие модального окна</a>
+
+<br><br>
+
+</div>
+
+
+<div id="modal-demo" class="modal" tabindex="-1" role="dialog">
+  <div class="modal__dialog" role="document">
+
+
+    <div class="form  modal__content">
+      <div class="form__header">
+        <button type="button" class="modal__close " data-dismiss="modal">
+          <svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#modal__close-img"></use></svg>
+        </button>
+        <h2 class="form__title">Заголовок формы</h2>
+      </div>
+      <form action="">
+        <div class="form__body">
+          <div class="field  form__control">
+            <input class="field__input" type="text" placeholder="Имя">
+          </div>
+          <div class="field  form__control">
+            <input class="field__input" type="tel" placeholder="Телефон">
+          </div>
+        </div>
+
+        <div class="modal__footer">
+
+          <div class="modal__accord">
+            Нажимая на кнопку «Отправить», я даю согласие на <a href="#">обработку персональных данных</a>
+          </div>
+
+          <div class="checkbox  modal__accord">
+            <input id="id_14" class="checkbox__input" type="checkbox">
+            <label class="checkbox__label" for="id_14">Чужой компьютер</label>
+          </div>
+
+          <button class="button  button--size_big  button--color_tertiary">Отправить</button>
+          <div class="error_message">Неверный логин или пароль.</div>
+        </div>
+      </form>
+    </div>
+
+
+  </div>
+</div>
+
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

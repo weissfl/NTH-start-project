@@ -6,7 +6,7 @@
   position: relative;
 
   $block-name: &; // #{$block-name}__element
-  @include my-wrapper;
+  @include wrapper;
 
   &__prev,
   &__next {
