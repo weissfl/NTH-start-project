@@ -6,7 +6,8 @@
     "sprite-png": [
       "__demo"
     ],
-    "button": []
+    "button": [],
+    "checkbox": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
