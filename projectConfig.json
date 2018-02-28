@@ -13,7 +13,8 @@
     "slider": [],
     "field": [],
     "select": [],
-    "modal": []
+    "modal": [],
+    "to-top": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
