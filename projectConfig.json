@@ -5,7 +5,8 @@
     "sprite-svg": [],
     "sprite-png": [
       "__demo"
-    ]
+    ],
+    "button": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

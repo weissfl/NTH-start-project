@@ -1,0 +1,97 @@
+// В этом файле должны быть стили для БЭМ-блока button, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+$field-padding-vertical: 5px;
+$field-padding-horizontal: 18px;
+$text-color: $white;
+
+.button {
+  display: inline-block;
+
+  min-width: 103px;
+  margin: 0;
+  padding: $field-padding-vertical  $field-padding-horizontal;
+
+  font-family: inherit;
+  font-size: 1.071em;
+  line-height: $line-height;
+
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: none;
+
+  color: $text-color;
+  border: 1px solid $color-primary;
+
+  @if ($border-radius > 0) {
+    border-radius: $border-radius;
+  }
+
+  background-color: $color-primary;
+  background-image: none;
+
+  $block-name: &; // #{$block-name}__element
+
+
+  &:hover {
+    border-color: lighten($color-primary, 10%);
+    background-color: lighten($color-primary, 10%);
+  }
+
+  &:active {
+    color: $text-color;
+    border-color: darken($color-primary, 10%);
+    background-color: darken($color-primary, 10%);
+  }
+
+  &:visited {
+    color: $text-color;
+  }
+
+  &--color_secondary {
+    border-color: $color-secondary;
+    background-color: $color-secondary;
+
+    &:hover {
+      border-color: lighten($color-secondary, 10%);
+      background-color: lighten($color-secondary, 10%);
+    }
+
+    &:active {
+      color: $text-color;
+      border-color: darken($color-secondary, 10%);
+      background-color: darken($color-secondary, 10%);
+    }
+  }
+
+  &--color_tertiary {
+    border-color: $color-tertiary;
+    background-color: $color-tertiary;
+
+    &:hover {
+      border-color: lighten($color-tertiary, 10%);
+      background-color: lighten($color-tertiary, 10%);
+    }
+
+    &:active {
+      color: $text-color;
+      border-color: darken($color-tertiary, 10%);
+      background-color: darken($color-tertiary, 10%);
+    }
+  }
+
+  &--size_big {
+    min-width: 144px;
+    padding: $field-padding-vertical + 3px  $field-padding-horizontal + 16px;
+  }
+
+  &--font-size_small {
+    font-size: .929em;
+  }
+
+}
