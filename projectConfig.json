@@ -11,7 +11,8 @@
     "radio-button": [],
     "form": [],
     "slider": [],
-    "field": []
+    "field": [],
+    "select": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
