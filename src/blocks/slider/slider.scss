@@ -1,0 +1,80 @@
+// В этом файле должны быть стили для БЭМ-блока slider, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.slider {
+  position: relative;
+
+  $block-name: &; // #{$block-name}__element
+  @include my-wrapper;
+
+  &__prev,
+  &__next {
+    position: absolute;
+    z-index: 1;
+    top: -50px;
+
+    width: 80px;
+    height: 80px;
+
+    font-size: 0;
+
+    border: 0;
+    background: transparent;
+  }
+
+  &__prev {
+    bottom: 0;
+    left: 15px;
+
+    margin: auto;
+
+    transform: rotate(180deg);
+  }
+
+  &__next {
+    right: 15px;
+    bottom: 0;
+
+    margin: auto;
+  }
+
+  &__arrow {
+    color: $gray;
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+    margin: 0;
+
+    list-style: none;
+
+    li {
+      margin: 0 4px;
+      padding: 0;
+    }
+
+    button {
+      display: block;
+
+      width: 12px;
+      height: 12px;
+
+      font-size: 0;
+
+      cursor: pointer;
+
+      border: 1px solid $color-tertiary;
+      border-radius: 50px;
+      background: transparent;
+    }
+
+    .slick-active button {
+      background: $color-tertiary;
+    }
+  }
+}
