@@ -16,7 +16,8 @@
     "./src/scss/mixins.scss",
     "./src/scss/normalize.scss",
     "./src/scss/global_scaffolding.scss",
-    "./src/scss/typography.scss"
+    "./src/scss/typography.scss",
+    "./src/scss/elements-form.scss"
   ],
   "addCssAfter": [
     "./src/scss/print.scss"
