@@ -275,7 +275,8 @@
       ]
     }],
     "at-rule-no-vendor-prefix": [true, {
-      "message": "Для @-правил вендорные префиксы использовать не следует"
+      "message": "Для @-правил вендорные префиксы использовать не следует",
+      "severity": "warning"
     }],
     "at-rule-semicolon-newline-after": ["always", {
       "message": "В @-правилах после ; новая строка быть должна"
