@@ -1,0 +1,182 @@
+// В этом файле должны быть стили для БЭМ-блока wysiwyg, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.wysiwyg {
+
+  $block-name:                &; // #{$block-name}__element
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $font-family--title;
+    font-weight: 400;
+    line-height: 1.2;
+
+    text-transform: none;
+
+    color: $gray--20;
+  }
+
+  h1 {
+    margin-top: ($line-height / 2);
+    margin-bottom: ($line-height / 2);
+
+    font-size: $font-size--h1;
+  }
+
+  h2 {
+    margin-top: ($line-height);
+    margin-bottom: ($line-height / 2);
+
+    font-size: $font-size--h2;
+  }
+
+  h3 {
+    margin-top: ($line-height);
+    margin-bottom: ($line-height / 2);
+
+    font-size: $font-size--h3;
+  }
+
+  h4 {
+    margin-top: ($line-height / 1.5);
+    margin-bottom: ($line-height / 2);
+
+    font-size: $font-size--h4;
+  }
+
+  h5 {
+    margin-top: ($line-height / 1.5);
+    margin-bottom: ($line-height / 2);
+
+    font-size: $font-size--h5;
+  }
+
+  h6 {
+    margin-top: ($line-height / 1.5);
+    margin-bottom: ($line-height / 2);
+
+    font-size: $font-size--h6;
+  }
+
+
+  p {
+    margin: 0;
+    padding: 0;
+
+    font-size: 1em;
+    line-height: 1.7;
+  }
+
+  p + p {
+    margin-top: ($line-height / 2);
+  }
+
+  ul {
+    margin-top: $line-height;
+    margin-bottom: $line-height;
+    margin-left: 28px;
+    padding: 0;
+
+    font-size: 1em;
+    line-height: $line-height;
+
+    list-style-type: disc;
+  }
+
+  ol {
+    margin-top: $line-height;
+    margin-bottom: $line-height;
+    margin-left: 28px;
+    padding: 0;
+
+    font-size: 1em;
+    line-height: $line-height;
+  }
+
+  li {
+    padding-left: 4px;
+  }
+
+  li + li {
+    margin-top: ($line-height / 2);
+  }
+
+  a {
+    color: $color--2;
+    //text-decoration-skip: ink;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: lighten($color--2, 15%);
+    }
+
+    &:active {
+      color: $color--3;
+    }
+  }
+
+  table {
+    width: 100%;
+    margin-top: ($line-height * 1.5);
+    margin-bottom: ($line-height * 1.5);
+
+    border-collapse: collapse;
+  }
+
+  td,
+  th {
+    padding: 13px;
+
+    font-weight: 400;
+
+    text-align: left;
+
+    border: 1px solid $gray--80;
+  }
+
+  tr {
+
+    &:first-child {
+
+      td,
+      th {
+        text-align: center;
+
+        color: $gray--10;
+        border: 1px solid $gray--90;
+        background-color: $gray--90;
+      }
+    }
+  }
+
+  hr {
+    display: block;
+
+    height: 1px;
+    margin-top: ($line-height * 2);
+    margin-bottom: ($line-height * 2);
+    padding: 0;
+
+    border: 0;
+    background: $gray--80;
+  }
+
+  blockquote {
+    margin-top: ($line-height * 2);
+    margin-bottom: ($line-height * 2);
+    padding: 4px 0 4px 19px;
+
+    font-style: italic;
+    line-height: 1.7;
+
+    border-left: 5px solid $color--1;
+  }
+}

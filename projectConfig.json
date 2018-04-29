@@ -15,7 +15,8 @@
     "field": [],
     "select": [],
     "modal": [],
-    "to-top": []
+    "to-top": [],
+    "wysiwyg": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
