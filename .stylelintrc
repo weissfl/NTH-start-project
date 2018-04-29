@@ -95,7 +95,8 @@
       "message": "Такого свойства нет"
     }],
     "property-no-vendor-prefix": [true, {
-      "message": "Вендорные префиксы тут лишние, используем Autoprefixer"
+      "message": "Вендорные префиксы тут лишние, используем Autoprefixer",
+      "severity": "warning"
     }],
     "declaration-bang-space-after": ["never", {
       "message": "После знака восклицательного пробел убрать следует"
