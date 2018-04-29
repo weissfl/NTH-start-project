@@ -17,6 +17,7 @@
     "to-top": []
   },
   "addCssBefore": [
+    "./src/scss/functions.scss",
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "./src/scss/normalize.scss",
@@ -41,8 +42,7 @@
     "./node_modules/jquery/dist/jquery.min.js",
     "./src/js/jquery-ui.min.js",
     "./node_modules/slick-carousel/slick/slick.min.js",
-    "./node_modules/svg4everybody/dist/svg4everybody.min.js",
-    "./node_modules/object-fit-images/dist/ofi.js"
+    "./node_modules/svg4everybody/dist/svg4everybody.min.js"
   ],
   "dirs": {
     "srcPath": "./src/",
