@@ -1,0 +1,66 @@
+// В этом файле должны быть стили для БЭМ-блока page, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page {
+  box-sizing: border-box;
+  min-width: 320px;
+  height: 100%;
+
+  font-size: $font-size--root;
+
+  $block-name: &; // #{$block-name}__element
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -ms-overflow-style: scrollbar;
+  -ms-text-size-adjust: 100%;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    margin: 0;
+
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: $line-height;
+
+    color: $black;
+    background-color: #fff;
+  }
+
+  &__header {
+    flex: 0 0 auto;
+  }
+
+  &__content {
+    flex: 1 0 auto;
+  }
+
+  &__wrapper {
+    @include wrapper;
+  }
+
+  &__row {
+    @include row-flex;
+  }
+
+  &__main {
+    @include col;
+    @include size(12);
+
+    &--with-sidebar {
+      @include size(9);
+    }
+  }
+
+  &__sidebar {
+    @include col;
+    @include size(3);
+  }
+
+  &__footer {
+    flex: 0 0 auto;
+    margin-top: auto;
+  }
+}

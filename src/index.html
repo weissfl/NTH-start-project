@@ -1,15 +1,31 @@
 <!doctype html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 @@include('_include/page_head.html', {"title": "Главная"})
 
-<body>
-  
-  @@include('blocks/page-header/page-header.html')
-  
-  @@include('blocks/page-footer/page-footer.html')
+<body class="page__body">
+
+  @@include('blocks/header/header.html', {"class": "page__header"})
+
+  <div class="page__content">
+    <div class="page__wrapper">
+      <div class="page__row">
+
+        <aside class="page__sidebar">
+          sidebar
+        </aside>
+
+        <main class="page__main  page__main--with-sidebar">
+          content
+        </main>
+
+      </div>
+    </div>
+  </div>
+
+  @@include('blocks/footer/footer.html', {"class": "page__footer"})
 
   @@include('_include/page_bottom.html')
-  
+
 </body>
 </html>
