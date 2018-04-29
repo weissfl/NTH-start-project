@@ -40,7 +40,7 @@
   }
 
   &__arrow {
-    color: $gray;
+    color: $gray--50;
   }
 
   &__dots {
@@ -68,13 +68,13 @@
 
       cursor: pointer;
 
-      border: 1px solid $color-tertiary;
+      border: 1px solid $color--3;
       border-radius: 50px;
       background: transparent;
     }
 
     .slick-active button {
-      background: $color-tertiary;
+      background: $color--3;
     }
   }
 }

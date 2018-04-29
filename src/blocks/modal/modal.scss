@@ -2,18 +2,13 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-$opacity: .7 !default;
-$transition-time: .3s !default;
-$z-index-modal: 100 !default;
-$width: 400px;
-
 .js-modal-open {
   overflow: hidden;
 }
 
 .modal {
   position: fixed;
-  z-index: $z-index-modal;
+  z-index: 100;
   top: 0;
   right: 0;
   bottom: 0;
@@ -33,12 +28,12 @@ $width: 400px;
   &__dialog {
     position: relative;
 
-    width: $width;
+    width: 400px;
     height: auto;
     margin: 50px auto;
 
     #{$block-name}--open & {
-        animation: modal-content-show $transition-time 1 both;
+      animation: modal-content-show $transition-time 1 both;
     }
 
     @include xs-block {
@@ -66,14 +61,14 @@ $width: 400px;
   &__accord {
     margin-bottom: 10px;
 
-    font-size: .85em;
+    font-size: 0.85em;
 
     text-align: left;
   }
 
   &__links {
-  margin-top: 10px;
-  font-size: .929em;
+    margin-top: 10px;
+    font-size: 0.929em;
 
     a + a {
       margin-left: 5px;
@@ -91,12 +86,12 @@ $width: 400px;
     border: none;
     background-color: transparent;
 
-    color: $color-primary;
+    color: $color--1;
   }
 
   &__backdrop {
     position: fixed;
-    z-index: ($z-index-modal - 1);
+    z-index: 99;
     top: 0;
     right: 0;
     bottom: 0;
@@ -108,6 +103,7 @@ $width: 400px;
 }
 
 @keyframes modal-backdrop-show {
+
   0% {
     opacity: 0;
   }
@@ -118,6 +114,7 @@ $width: 400px;
 }
 
 @keyframes modal-content-show {
+
   0% {
     transform: translateY(-2em);
 

@@ -12,7 +12,7 @@
   height: 27px;
 
   color: inherit;
-  border: 1px solid $gray-lighter;
+  border: 1px solid $gray--60;
   background-color: $white;
 
   $block-name: &; // #{$block-name}__element
@@ -34,7 +34,7 @@
     margin: auto;
     padding-left: 8px;
 
-    font-size: .929em;
+    font-size: 0.929em;
 
     user-select: none;
     text-align: left;
@@ -71,8 +71,8 @@
   }
 
   & option {
-    font-size: .929em;
+    font-size: 0.929em;
 
-    color: $gray-darker;
+    color: $gray--10;
   }
 }

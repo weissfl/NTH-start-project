@@ -31,14 +31,14 @@
 
       content: '';
 
-      border: 1px solid $gray-lighter;
+      border: 1px solid $gray--60;
       border-radius: 50%;
       background-color: $white;
     }
   }
 
   &__input:checked + &__label::before {
-    border-color: $color-primary;
+    border-color: $color--1;
   }
 
   &__input:checked + &__label::after {
@@ -52,10 +52,11 @@
     content: '';
 
     border-radius: 50%;
-    background-color: $color-primary;
+    background-color: $color--1;
   }
 
   &--nolabel {
+
     #{$block-name}__label {
       padding-left: 16px;
     }
