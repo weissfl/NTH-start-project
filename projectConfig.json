@@ -1,7 +1,8 @@
 {
   "blocks": {
-    "page-header": [],
-    "page-footer": [],
+    "page": [],
+    "header": [],
+    "footer": [],
     "sprite-svg": [],
     "sprite-png": [
       "__demo"
