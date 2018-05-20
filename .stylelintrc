@@ -7,7 +7,8 @@
       "severity": "warning"
     }],
     "color-named": ["never", {
-      "message": "Цвета ключевыми словами нельзя писать"
+      "message": "Цвета ключевыми словами нельзя писать",
+      "severity": "warning"
     }],
     "color-no-invalid-hex": [true, {
       "message": "HEX цвета правильно написаны быть должны"
