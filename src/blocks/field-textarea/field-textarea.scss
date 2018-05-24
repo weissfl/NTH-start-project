@@ -1,0 +1,29 @@
+// В этом файле должны быть стили для БЭМ-блока field-textarea, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.field-textarea {
+  width: 100%;
+  height: 32px;
+  min-height: 88px;
+  padding: 10px;
+
+  resize: vertical;
+
+  border: 1px solid $gray--80;
+  background-color: $white;
+
+  $block-name: &; // #{$block-name}__element
+  @if ($border-radius > 0) {
+    border-radius: $border-radius;
+  }
+
+  &::placeholder {
+    color: $gray--50;
+  }
+}
+
+.field-textarea.error_input {
+  border-color: $color--3;
+  background-color: lighten($color--3, 32%);
+}
