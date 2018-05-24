@@ -1,0 +1,11 @@
+// В этом файле должны быть стили для БЭМ-блока field-label, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.field-label {
+  cursor: pointer;
+
+  color: $gray--20;
+
+  $block-name: &; // #{$block-name}__element
+}
