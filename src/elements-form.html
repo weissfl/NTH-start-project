@@ -1,65 +1,65 @@
-<!doctype html>
-<html lang="ru">
+<!DOCTYPE html>
+<html class="page" lang="ru">
 
 @@include('_include/page_head.html', {"title": "Элементы формы"})
 
 <body>
 
-<div style="width: 1170px; margin: 0 auto;">
+<div style="max-width: 1170px; margin: 0 auto;">
 
 <h1>Элементы формы</h1>
 
-<div class="field">
-  <label class="field__label" for="">Поле для ввода текста</label>
-  <input class="field__input" type="text" placeholder="Подсказка поля">
+<div class="field-block">
+  @@include('blocks/field-label/field-label.html', {"class": "field-block__label", "text": "Поле для ввода текста"})
+  @@include('blocks/field-input/field-input.html', {"class": "field-block__input", "placeholder": "Подсказка поля"})
 </div>
 
 <br>
 
-<div class="field">
-  <label class="field__label" for="">Поле для ввода текста</label>
-  <input class="field__input  error_input" type="text" placeholder="Подсказка поля">
+<div class="field-block">
+  @@include('blocks/field-label/field-label.html', {"class": "field-block__label", "text": "Поле для ввода текста"})
+  @@include('blocks/field-input/field-input.html', {"class": "field-block__input  error_input", "placeholder": "Подсказка поля"})
 </div>
 
 <br>
 
-<div class="field  field--align_textarea">
-  <label class="field__label" for="">Текстовое поле</label>
-  <textarea class="field__input" name="textarea" id="" placeholder="Подсказка поля"></textarea>
+<div class="field-block  field-block--textarea">
+  @@include('blocks/field-label/field-label.html', {"class": "field-block__label", "text": "Текстовое поле"})
+  @@include('blocks/field-textarea/field-textarea.html', {"class": "field-block__input","text": "Подсказка поля"})
 </div>
 
 <br>
 
 <div class="checkbox">
   <input id="id_1" class="checkbox__input" type="checkbox" checked>
-  <label class="checkbox__label" for="id_1">Чекбокс</label>
+  <label class="field-label  checkbox__label" for="id_1">Чекбокс</label>
 </div>
 
 <div class="checkbox">
   <input id="id_1.1" class="checkbox__input" type="checkbox">
-  <label class="checkbox__label" for="id_1.1">Чекбокс</label>
+  <label class="field-label  checkbox__label" for="id_1.1">Чекбокс</label>
 </div>
 
 <div class="checkbox  checkbox--nolabel">
   <input id="id_1.3" class="checkbox__input" type="checkbox">
-  <label class="checkbox__label" for="id_1.3"></label>
+  <label class="field-label  checkbox__label" for="id_1.3"></label>
 </div>
 
 <br>
 
 <div class="radio-button">
     <input id="id_2" class="radio-button__input" name="test" type="radio">
-    <label class="radio-button__label" for="id_2">Радиокнопка</label>
+    <label class="field-label  radio-button__label" for="id_2">Радиокнопка</label>
 </div>
 
 <div class="radio-button">
     <input id="id_3" class="radio-button__input" name="test" type="radio" checked>
-    <label class="radio-button__label" for="id_3">Радиокнопка</label>
+    <label class="field-label  radio-button__label" for="id_3">Радиокнопка</label>
 </div>
 
 <div class="radio-button  radio-button--nolabel">
   <input id="id_4" class="radio-button__input" name="test" type="radio" checked>
-  <label class="radio-button__label" for="id_4"></label>
+  <label class="field-label  radio-button__label" for="id_4"></label>
 </div>
 
 <br>
@@ -68,20 +68,6 @@
 <input class="button" type="submit" value="В корзину">
 <input class="button" type="button" value="В корзину">
 <a class="button" href="#">В корзину</a>
-
-<br><br>
-
-<button class="button  button--color_tertiary">В корзину</button>
-<input class="button  button--color_tertiary" type="submit" value="В корзину">
-<input class="button  button--color_tertiary" type="button" value="В корзину">
-<a class="button  button--color_tertiary" href="#">В корзину</a>
-
-<br><br>
-
-<button class="button  button--size_big  button--color_tertiary">В корзину</button>
-<input class="button  button--size_big" type="submit" value="В корзину">
-<input class="button  button--size_big  button--color_tertiary" type="button" value="В корзину">
-<a class="button  button--size_big" href="#">В корзину</a>
 
 <br><br>
 
@@ -127,21 +113,20 @@
   </div>
   <form action="">
     <div class="form__body">
-      <div class="field  form__control">
-        <label class="field__label" for="">Имя</label>
-        <input class="field__input" type="text" placeholder="Подсказка поля">
+
+      <div class="field-block  form__control">
+        @@include('blocks/field-label/field-label.html', {"class": "field-block__label", "text": "Имя"})
+        @@include('blocks/field-input/field-input.html', {"class": "field-block__input", "placeholder": "Введите имя"})
       </div>
-      <div class="field  form__control">
-        <label class="field__label" for="">Телефон</label>
-        <input class="field__input" type="tel" placeholder="Подсказка поля">
+
+      <div class="field-block  form__control">
+        @@include('blocks/field-label/field-label.html', {"class": "field-block__label", "text": "Телефон"})
+        @@include('blocks/field-input/field-input.html', {"class": "field-block__input", "placeholder": "Введите телефон"})
       </div>
-      <div class="field  form__control">
-        <label class="field__label" for="">Электронная почта</label>
-        <input class="field__input" type="email" placeholder="Подсказка поля">
-      </div>
-      <div class="field  form__control">
-        <label class="field__label" for="id_10">Выберите что хотите</label>
-        <div class="field__input  select  select--size_big">
+
+      <div class="field-block  form__control">
+        <label class="field-label  field-block__label" for="id_10">Выберите что хотите</label>
+        <div class="field-block__input  select  select--size_big">
           <div class="select__value"></div>
           <select id="id_10">
             <option>Mustard</option>
@@ -150,9 +135,10 @@
           </select>
         </div>
       </div>
-      <div class="field  field--align_textarea  form__control">
-        <label class="field__label" for="">Примечание</label>
-        <textarea class="field__input" name="textarea" id="" placeholder="Подсказка поля"></textarea>
+
+      <div class="field-block  field-block--textarea  form__control">
+        <label class="field-label  field-block__label" for="">Примечание</label>
+        <textarea class="field-textarea  field-block__input" name="textarea" id="" placeholder="Подсказка поля"></textarea>
       </div>
     </div>
 
@@ -161,14 +147,14 @@
 
       <div class="checkbox  form__accord">
         <input id="id_13" class="checkbox__input" type="checkbox">
-        <label class="checkbox__label" for="id_13">Я хочу получать спецпредложения на почту</label>
+        <label class="field-label  checkbox__label" for="id_13">Я хочу получать спецпредложения на почту</label>
       </div>
 
       <div class="form__accord">
         Нажимая на кнопку «Отправить форму», я даю согласие на <a href="#">обработку персональных данных</a>
       </div>
 
-      <button class="button  button--size_big  button--color_tertiary">Отправить форму</button>
+      <button class="button">Отправить форму</button>
     </div>
   </form>
 </div>
