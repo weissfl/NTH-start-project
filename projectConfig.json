@@ -12,19 +12,20 @@
     "radio-button": [],
     "form": [],
     "slider": [],
-    "field": [],
     "select": [],
     "modal": [],
     "to-top": [],
-    "wysiwyg": []
+    "wysiwyg": [],
+    "field-input": [],
+    "field-textarea": [],
+    "field-label": [],
+    "field-block": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "./src/scss/global_scaffolding.scss",
-    "./src/scss/typography.scss",
-    "./src/scss/elements-form.scss",
     "./node_modules/slick-carousel/slick/slick.scss"
   ],
   "addCssAfter": [
