@@ -32,34 +32,34 @@
 
 <div class="checkbox">
   <input id="id_1" class="checkbox__input" type="checkbox" checked>
-  <label class="field-label  checkbox__label" for="id_1">Чекбокс</label>
+  <label class="checkbox__label" for="id_1">Чекбокс</label>
 </div>
 
 <div class="checkbox">
   <input id="id_1.1" class="checkbox__input" type="checkbox">
-  <label class="field-label  checkbox__label" for="id_1.1">Чекбокс</label>
+  <label class="checkbox__label" for="id_1.1">Чекбокс</label>
 </div>
 
 <div class="checkbox  checkbox--nolabel">
   <input id="id_1.3" class="checkbox__input" type="checkbox">
-  <label class="field-label  checkbox__label" for="id_1.3"></label>
+  <label class="checkbox__label" for="id_1.3"></label>
 </div>
 
 <br>
 
 <div class="radio-button">
     <input id="id_2" class="radio-button__input" name="test" type="radio">
-    <label class="field-label  radio-button__label" for="id_2">Радиокнопка</label>
+    <label class="radio-button__label" for="id_2">Радиокнопка</label>
 </div>
 
 <div class="radio-button">
     <input id="id_3" class="radio-button__input" name="test" type="radio" checked>
-    <label class="field-label  radio-button__label" for="id_3">Радиокнопка</label>
+    <label class="radio-button__label" for="id_3">Радиокнопка</label>
 </div>
 
 <div class="radio-button  radio-button--nolabel">
   <input id="id_4" class="radio-button__input" name="test" type="radio" checked>
-  <label class="field-label  radio-button__label" for="id_4"></label>
+  <label class="radio-button__label" for="id_4"></label>
 </div>
 
 <br>
@@ -91,73 +91,59 @@
   </select>
 </div>
 
-<br>
-
-<div class="field">
-  <label class="field__label" for="id_10">Селект</label>
-  <div class="field__input  select">
-    <div class="select__value"></div>
-    <select id="id_10">
-      <option>Mustard</option>
-      <option>Ketchup</option>
-      <option>Barbecue</option>
-    </select>
-  </div>
-</div>
-
 <br><br>
 
-<div class="form">
+
+<form class="form" action="">
   <div class="form__header">
     <h2 class="form__title">Заголовок формы</h2>
   </div>
-  <form action="">
-    <div class="form__body">
 
-      <div class="field-block  form__control">
-        @@include('blocks/field-label/field-label.html', {"class": "field-block__label", "text": "Имя"})
-        @@include('blocks/field-input/field-input.html', {"class": "field-block__input", "placeholder": "Введите имя"})
-      </div>
+  <div class="form__body">
 
-      <div class="field-block  form__control">
-        @@include('blocks/field-label/field-label.html', {"class": "field-block__label", "text": "Телефон"})
-        @@include('blocks/field-input/field-input.html', {"class": "field-block__input", "placeholder": "Введите телефон"})
-      </div>
+    <div class="field-block  form__control">
+      @@include('blocks/field-label/field-label.html', {"class": "field-block__label", "text": "Имя"})
+      @@include('blocks/field-input/field-input.html', {"class": "field-block__input", "placeholder": "Введите имя"})
+    </div>
 
-      <div class="field-block  form__control">
-        <label class="field-label  field-block__label" for="id_10">Выберите что хотите</label>
-        <div class="field-block__input  select  select--size_big">
-          <div class="select__value"></div>
-          <select id="id_10">
-            <option>Mustard</option>
-            <option>Ketchup</option>
-            <option>Barbecue</option>
-          </select>
-        </div>
-      </div>
+    <div class="field-block  form__control">
+      @@include('blocks/field-label/field-label.html', {"class": "field-block__label", "text": "Телефон"})
+      @@include('blocks/field-input/field-input.html', {"class": "field-block__input", "placeholder": "Введите телефон"})
+    </div>
 
-      <div class="field-block  field-block--textarea  form__control">
-        <label class="field-label  field-block__label" for="">Примечание</label>
-        <textarea class="field-textarea  field-block__input" name="textarea" id="" placeholder="Подсказка поля"></textarea>
+    <div class="field-block  form__control">
+      <label class="field-label  field-block__label" for="id_10">Выберите что хотите</label>
+      <div class="field-block__input  select  select--size_big">
+        <div class="select__value"></div>
+        <select id="id_10">
+          <option>Mustard</option>
+          <option>Ketchup</option>
+          <option>Barbecue</option>
+        </select>
       </div>
     </div>
 
-    <div class="form__footer">
-      <p class="form__note">* — Все поля отмеченне звездочкой обязательны для заполнения</p>
-
-      <div class="checkbox  form__accord">
-        <input id="id_13" class="checkbox__input" type="checkbox">
-        <label class="field-label  checkbox__label" for="id_13">Я хочу получать спецпредложения на почту</label>
-      </div>
-
-      <div class="form__accord">
-        Нажимая на кнопку «Отправить форму», я даю согласие на <a href="#">обработку персональных данных</a>
-      </div>
-
-      <button class="button">Отправить форму</button>
+    <div class="field-block  field-block--textarea  form__control">
+      <label class="field-label  field-block__label" for="">Примечание</label>
+      <textarea class="field-textarea  field-block__input" name="textarea" id="" placeholder="Подсказка поля"></textarea>
     </div>
-  </form>
-</div>
+  </div>
+
+  <div class="form__footer">
+    <p class="form__note">* — Все поля отмеченне звездочкой обязательны для заполнения</p>
+
+    <div class="checkbox  form__accord">
+      <input id="id_13" class="checkbox__input" type="checkbox">
+      <label class="field-label  checkbox__label" for="id_13">Я хочу получать спецпредложения на почту</label>
+    </div>
+
+    <div class="form__accord">
+      Нажимая на кнопку «Отправить форму», я даю согласие на <a href="#">обработку персональных данных</a>
+    </div>
+
+    <button class="button">Отправить форму</button>
+  </div>
+</form>
 
 <br><br>
 
@@ -170,38 +156,27 @@
 
 <div id="modal-demo" class="modal" tabindex="-1" role="dialog">
   <div class="modal__dialog" role="document">
+    <button type="button" class="modal__close " data-dismiss="modal">
+      <div class="modal__cross"></div>
+    </button>
 
+    <div class="modal__content">
+      <form class="form" action="">
+        <div class="form__header">
+          <h2 class="form__title">Заголовок окна</h2>
+        </div>
 
-    <div class="form  modal__content">
-      <div class="form__header">
-        <button type="button" class="modal__close " data-dismiss="modal">
-          <div class="modal__cross"></div>
-        </button>
-        <h2 class="form__title">Заголовок формы</h2>
-      </div>
-      <form action="">
         <div class="form__body">
-          <div class="field  form__control">
-            <input class="field__input" type="text" placeholder="Имя">
+          <div class="field-block  form__control">
+            @@include('blocks/field-input/field-input.html', {"class": "field-block__input", "placeholder": "Имя"})
           </div>
-          <div class="field  form__control">
-            <input class="field__input" type="tel" placeholder="Телефон">
+          <div class="field-block  form__control">
+            @@include('blocks/field-input/field-input.html', {"class": "field-block__input", "placeholder": "Телефон"})
           </div>
         </div>
 
-        <div class="modal__footer">
-
-          <div class="modal__accord">
-            Нажимая на кнопку «Отправить», я даю согласие на <a href="#">обработку персональных данных</a>
-          </div>
-
-          <div class="checkbox  modal__accord">
-            <input id="id_14" class="checkbox__input" type="checkbox">
-            <label class="checkbox__label" for="id_14">Чужой компьютер</label>
-          </div>
-
-          <button class="button  button--size_big  button--color_tertiary">Отправить</button>
-          <div class="error_message">Неверный логин или пароль.</div>
+        <div class="form__footer">
+          <button class="button">Отправить</button>
         </div>
       </form>
     </div>
@@ -210,7 +185,7 @@
 </div>
 
 
-  @@include('_include/page_bottom.html')
+@@include('_include/page_bottom.html')
 
 </body>
 </html>

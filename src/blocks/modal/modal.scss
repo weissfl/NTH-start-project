@@ -7,6 +7,8 @@
 }
 
 .modal {
+  $block-name: &; // #{$block-name}__element
+
   position: fixed;
   z-index: 100;
   top: 0;
@@ -17,7 +19,6 @@
   display: none;
   overflow: hidden;
 
-  $block-name: &; // #{$block-name}__element
   -webkit-overflow-scrolling: touch;
 
   .js-modal-open & {
@@ -26,6 +27,9 @@
   }
 
   &__dialog {
+    border: 3px solid $color--1;
+    padding: 31px 31px 39px;
+    background-color: $white;
     position: relative;
 
     width: 400px;
@@ -58,14 +62,6 @@
     background-color: #fff;
   }
 
-  &__accord {
-    margin-bottom: 10px;
-
-    font-size: 0.85em;
-
-    text-align: left;
-  }
-
   &__links {
     margin-top: 10px;
     font-size: 0.929em;
@@ -75,10 +71,9 @@
     }
   }
 
-
   &__close {
     position: absolute !important;
-    top: 6px;
+    top: 12px;
     right: 6px;
 
     cursor: pointer;
