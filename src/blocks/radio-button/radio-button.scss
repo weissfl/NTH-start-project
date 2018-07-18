@@ -3,8 +3,9 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .radio-button {
-  //TODO: сделать отобажение фокуса
   $block-name: &; // #{$block-name}__element
+
+  height: 16px;
 
   &__input {
     @include visually-hidden;
@@ -13,10 +14,10 @@
   &__label {
     position: relative;
 
-    display: inline-block;
+    display: block;
+    height: inherit;
 
     padding-left: 25px;
-    //line-height: 1.2;
 
     vertical-align: top;
     cursor: pointer;
@@ -54,6 +55,11 @@
 
     border-radius: 50%;
     background-color: $color--1;
+  }
+
+  &__input:focus + &__label::before {
+    outline: none;
+    box-shadow: 0 0 0 1px $white, 0 0 1px 3px $color--2;
   }
 
   &--nolabel {
