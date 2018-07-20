@@ -19,7 +19,8 @@
     "field-input": [],
     "field-textarea": [],
     "field-label": [],
-    "field-block": []
+    "field-block": [],
+    "breadcrumb": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

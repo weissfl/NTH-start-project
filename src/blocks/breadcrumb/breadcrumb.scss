@@ -1,0 +1,28 @@
+// В этом файле должны быть стили для БЭМ-блока breadcrumb, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.breadcrumb {
+  $block-name: &; // #{$block-name}__element
+
+  &__item {
+    color: $gray;
+    font-size: 0.929em;
+
+    a {
+      font-size: inherit;
+      color: $gray-darker;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__separator {
+    color: $gray-darker;
+    margin: 0 8px;
+  }
+}
+
