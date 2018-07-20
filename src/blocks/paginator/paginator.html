@@ -1,0 +1,25 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/paginator/paginator.html', {"class": ""})
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+
+-->
+
+<div class="paginator  @@class">
+  <button class="button  paginator__more">Показать ещё</button>
+  <div class="paginator__wrapper">
+    <a class="paginator__item  paginator__start" href="#"> < </a>
+    <a class="paginator__item" href="#">1</a>
+    <span class="paginator__item  paginator__item--active">2</span>
+    <a class="paginator__item" href="#">3</a>
+    <a class="paginator__item" href="#">4</a>
+    <a class="paginator__item" href="#">5</a>
+    <a class="paginator__item  paginator__end" href="#"> > </svg>
+    </a>
+  </div>
+</div>

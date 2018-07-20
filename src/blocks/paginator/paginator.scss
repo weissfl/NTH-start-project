@@ -1,0 +1,84 @@
+// В этом файле должны быть стили для БЭМ-блока paginator, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.paginator {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+
+  $block-name: &; // #{$block-name}__element
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    text-align: center;
+
+    border: 1px solid $gray-lighter;
+    border-radius: 50px;
+    background-color: $white;
+  }
+
+  &__item {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0;
+
+    text-decoration: none;
+
+    color: $gray-darker;
+
+    &:hover,
+    &:visited {
+      color: $gray-darker;
+    }
+
+    &--active {
+      font-weight: 700;
+
+      color: $color-tertiary;
+
+      &:hover {
+        color: $color-tertiary;
+      }
+    }
+  }
+
+  &__start,
+  &__end {
+
+    #{$block-name}__arrow {
+      color: $gray-lighter;
+    }
+
+    &:hover {
+
+      #{$block-name}__arrow {
+        color: $color-tertiary;
+      }
+    }
+  }
+
+  &__start {
+    border-right: 1px solid $gray-lighter;
+
+    #{$block-name}__arrow {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__end {
+
+    border-left: 1px solid $gray-lighter;
+
+    #{$block-name}__arrow {
+      transform: translateY(1px);
+    }
+  }
+
+  &__more {
+    margin-bottom: 20px;
+  }
+}

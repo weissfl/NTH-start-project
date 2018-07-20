@@ -20,7 +20,8 @@
     "field-textarea": [],
     "field-label": [],
     "field-block": [],
-    "breadcrumb": []
+    "breadcrumb": [],
+    "paginator": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
