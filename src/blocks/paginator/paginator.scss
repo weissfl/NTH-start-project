@@ -16,7 +16,7 @@
 
     text-align: center;
 
-    border: 1px solid $gray-lighter;
+    border: 1px solid $gray--40;
     border-radius: 50px;
     background-color: $white;
   }
@@ -28,20 +28,20 @@
 
     text-decoration: none;
 
-    color: $gray-darker;
+    color: $gray--60;
 
     &:hover,
     &:visited {
-      color: $gray-darker;
+      color: $gray--60;
     }
 
     &--active {
       font-weight: 700;
 
-      color: $color-tertiary;
+      color: $color--3;
 
       &:hover {
-        color: $color-tertiary;
+        color: $color--3;
       }
     }
   }
@@ -50,19 +50,19 @@
   &__end {
 
     #{$block-name}__arrow {
-      color: $gray-lighter;
+      color: $gray--40;
     }
 
     &:hover {
 
       #{$block-name}__arrow {
-        color: $color-tertiary;
+        color: $color--3;
       }
     }
   }
 
   &__start {
-    border-right: 1px solid $gray-lighter;
+    border-right: 1px solid $gray--40;
 
     #{$block-name}__arrow {
       transform: rotate(180deg);
@@ -71,7 +71,7 @@
 
   &__end {
 
-    border-left: 1px solid $gray-lighter;
+    border-left: 1px solid $gray--40;
 
     #{$block-name}__arrow {
       transform: translateY(1px);

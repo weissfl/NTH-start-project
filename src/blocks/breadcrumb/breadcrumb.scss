@@ -6,12 +6,12 @@
   $block-name: &; // #{$block-name}__element
 
   &__item {
-    color: $gray;
+    color: $gray--50;
     font-size: 0.929em;
 
     a {
       font-size: inherit;
-      color: $gray-darker;
+      color: $gray--70;
       text-decoration: none;
 
       &:hover {
@@ -21,7 +21,7 @@
   }
 
   &__separator {
-    color: $gray-darker;
+    color: $gray--70;
     margin: 0 8px;
   }
 }
