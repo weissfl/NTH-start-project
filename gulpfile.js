@@ -34,12 +34,12 @@ var smartgridSettings = {
     mobileFirst: false, /* mobileFirst ? 'min-width' : 'max-width' */
     detailedCalc: false, /* расчет процентов в css или в браузере */
     container: {
-        maxWidth: '1200px', /* max-width оn very large screen */
+        maxWidth: '1170px', /* max-width оn very large screen */
         fields: '15px' /* side fields */
     },
     breakPoints: {
         lg: {
-            width: '1200px', /* -> @media (max-width: 1100px) */
+            width: '1170px', /* -> @media (max-width: 1100px) */
         },
         md: {
             width: '992px'
