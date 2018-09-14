@@ -5,7 +5,7 @@
 .checkbox {
   $block-name: &; // #{$block-name}__element
 
-  height: 16px;
+  min-height: 16px;
 
   &__input {
     @include visually-hidden;
