@@ -46,7 +46,8 @@
     "./node_modules/jquery/dist/jquery.min.js",
     "./src/js/jquery-ui.min.js",
     "./node_modules/slick-carousel/slick/slick.min.js",
-    "./node_modules/svg4everybody/dist/svg4everybody.min.js"
+    "./node_modules/svg4everybody/dist/svg4everybody.min.js",
+    "./node_modules/js-cookie/src/js.cookie.js"
   ],
   "dirs": {
     "srcPath": "./src/",
