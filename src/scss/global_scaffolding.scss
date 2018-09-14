@@ -1,13 +1,14 @@
 // Глобальные стили
 
-//@font-face {
-// font-family: 'FONTNAME';
-// src: url('../fonts/FONTNAME.woff2') format('woff2'),
-//      url('../fonts/FONTNAME.woff') format('woff'),
-//      url('../fonts/FONTNAME.ttf')  format('truetype');
-// font-weight: 400;
-// font-style: normal;
-//}
+// @font-face {
+//   font-family: 'FONTNAME';
+//   src: local('FONTNAME'),
+//        url('../fonts/FONTNAME.woff2') format('woff2'),
+//        url('../fonts/FONTNAME.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: swap;
+// }
 
 // Сделаем viewport великим снова! (привет, IE10)
 // http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
