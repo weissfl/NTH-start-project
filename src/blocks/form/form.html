@@ -15,36 +15,31 @@
   </div>
   <form action="">
     <div class="form__body">
-      <div class="field  form__control">
-        <label class="field__label" for="">Имя</label>
-        <input class="field__input" type="text" placeholder="Подсказка поля">
+
+      <div class="field-block  form__control">
+        <label class="field-label" for="">Имя</label>
+        <input class="field-input" type="text" placeholder="Подсказка поля">
       </div>
-      <div class="field  form__control">
-        <label class="field__label" for="">Телефон</label>
-        <input class="field__input" type="tel" placeholder="Подсказка поля">
+
+      <div class="field-block  form__control">
+        <label class="field-label" for="">Телефон</label>
+        <input class="field-input" type="tel" placeholder="Подсказка поля">
       </div>
-      <div class="field  form__control">
-        <label class="field__label" for="">Электронная почта</label>
-        <input class="field__input" type="email" placeholder="Подсказка поля">
+
+      <div class="field-block  form__control">
+        <label class="field-label" for="">Электронная почта</label>
+        <input class="field-input" type="email" placeholder="Подсказка поля">
       </div>
-      <div class="field  form__control">
-        <label class="field__label" for="id_10">Выберите что хотите</label>
-        <div class="field__input  select  select--size_big">
-          <div class="select__value"></div>
-          <select id="id_10">
-            <option>Mustard</option>
-            <option>Ketchup</option>
-            <option>Barbecue</option>
-          </select>
-        </div>
+
+      <div class="field-block  field-block--align_textarea  form__control">
+        <label class="field-label" for="">Примечание</label>
+        <textarea class="field-input" name="textarea" id="" placeholder="Подсказка поля"></textarea>
       </div>
-      <div class="field  field--align_textarea  form__control">
-        <label class="field__label" for="">Примечание</label>
-        <textarea class="field__input" name="textarea" id="" placeholder="Подсказка поля"></textarea>
-      </div>
+
     </div>
 
     <div class="form__footer">
+
       <p class="form__note">* — Все поля отмеченне звездочкой обязательны для заполнения</p>
 
       <div class="checkbox  form__accord">
@@ -58,7 +53,7 @@
 
       <div class="form__captcha"></div>
 
-      <button class="button  button--size_big  button--color_tertiary">Отправить форму</button>
+      <button class="button">Отправить форму</button>
     </div>
   </form>
 </div>

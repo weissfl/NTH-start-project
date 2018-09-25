@@ -63,7 +63,7 @@
     this.checkScrollbar()
     this.setScrollbar()
     // this.$body.addClass('modal-open')
-	$("body").css("width", $("body").width())
+  $("body").css("width", $("body").width())
     this.$body.addClass('js-modal-open')
 
 
@@ -192,7 +192,7 @@
     this.$element.hide()
     this.backdrop(function () {
       that.$body.removeClass('js-modal-open')
-	  $("body").css("width", 'auto')
+    $("body").css("width", 'auto')
       that.resetAdjustments()
       that.resetScrollbar()
       // that.$element.trigger('hidden.bs.modal')
@@ -369,6 +369,6 @@
 
 }(jQuery);
 
-// $(window).on("load", function() {
-// 	$(".page-footer").after($(".modal"));
-// });
+$(window).on("load", function() {
+  $(".page-footer").after($(".modal"));
+});

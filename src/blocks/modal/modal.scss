@@ -62,15 +62,6 @@
     background-color: #fff;
   }
 
-  &__links {
-    margin-top: 10px;
-    font-size: 0.929em;
-
-    a + a {
-      margin-left: 5px;
-    }
-  }
-
   &__close {
     position: absolute !important;
     top: 12px;
