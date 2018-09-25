@@ -86,7 +86,7 @@ let postCssPlugins = [
     browsers: ['last 2 version']
   }),
   mqpacker({
-    sort: sortCSSmq.desktopFirst //mobile-first: MsortCSSmq, desktop-first: sortCSSmq.desktopFirst
+    sort: sortCSSmq.desktopFirst //mobile-first: sortCSSmq, desktop-first: sortCSSmq.desktopFirst
   }),
   atImport(),
   inlineSVG(),
