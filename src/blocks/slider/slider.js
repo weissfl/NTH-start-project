@@ -1,4 +1,4 @@
-$('.slider').slick({
+$('.slider__list').slick({
   dots: true,
   dotsClass: 'slider__dots',
   infinite: true,
@@ -7,8 +7,8 @@ $('.slider').slick({
   autoplaySpeed: 7000,
   fade: false,
   cssEase: 'linear',
-  prevArrow: '<button type="button" class="slider__prev"></button>',
-  nextArrow: '<button type="button" class="slider__next"></button>',
+  prevArrow: '<button type="button" class="slider__prev">></button>',
+  nextArrow: '<button type="button" class="slider__next">></button>',
 });
 
 
