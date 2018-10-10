@@ -22,7 +22,8 @@
     "field-block": [],
     "breadcrumb": [],
     "paginator": [],
-    "link": []
+    "link": [],
+    "hamburger": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

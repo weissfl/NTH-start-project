@@ -1,0 +1,19 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/hamburger/hamburger.html', {"class": ""})
+@ @include('../hamburger/hamburger.html', {"class": ""})
+@ @loop("blocks/hamburger/hamburger.html", "data.json")
+@ @loop("../hamburger/hamburger.html", "data.json")
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+-->
+
+<button class="hamburger  @@class" type="button" aria-label="Menu" aria-controls="navigation"> <!-- hamburger--active -->
+  <span class="hamburger__box">
+    <span class="hamburger__inner"></span>
+  </span>
+</button>
