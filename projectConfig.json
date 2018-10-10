@@ -21,7 +21,8 @@
     "field-label": [],
     "field-block": [],
     "breadcrumb": [],
-    "paginator": []
+    "paginator": [],
+    "link": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
