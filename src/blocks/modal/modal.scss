@@ -75,6 +75,10 @@
     color: $color--1;
   }
 
+  &__cross {
+    display: block;
+  }
+
   &__backdrop {
     position: fixed;
     z-index: 99;
