@@ -1,5 +1,4 @@
 // Базовые цвета
-
 $black:                       hsl(0, 0%, 0%);
 $gray--10:                    hsl(0, 0%, 10%);
 $gray--20:                    hsl(0, 0%, 20%);
@@ -10,38 +9,39 @@ $gray--60:                    hsl(0, 0%, 60%);
 $gray--70:                    hsl(0, 0%, 70%);
 $gray--80:                    hsl(0, 0%, 80%);
 $gray--90:                    hsl(0, 0%, 90%);
-$white:                      hsl(0, 0%, 100%);
-
-$color--1:                    #0273d9;
-$color--2:                    #ffc200;
-$color--3:                    #ff4f00;
+$white:                       hsl(0, 0%, 100%);
 
 
 // Шрифты
-
 $font-family:                Arial, Helvetica, sans-serif;
 $font-family--2:             Verdana, Tahoma, sans-serif;
 $font-family--title:         Arial, Helvetica, sans-serif;
 
 
-// Размер шрифтов
-
-$font-size--root:            16px;
-$font-size:                  1rem;
-$font-size--h1:              rem(40px);
-$font-size--h2:              rem(32px);
-$font-size--h3:              rem(24px);
-$font-size--h4:              rem(18px);
-$font-size--h5:              rem(16px);
-$font-size--h6:              rem(16px);
-$font-size--small:           rem(12px);
-
-$line-height:                1.375;
+// Root
+$font--root:                  14px/16px $font-family;
+$color--root:                 $gray--20;
+$background-color--root:      $white;
 
 
 // Разное
-
 $border-radius:               0;
 $opacity:                     0.7;
 $transition-time:             0.3s;
 $shadow:                      0 4px 2px -2px rgba(0, 0, 0, 0.3);
+$focus-shadow:                0 0 0 1px #fff, 0 0 1px 3px #000;
+
+
+//Типографика
+$text-line-regular-m:         400 14px/16px $font-family;
+
+
+//Отступы
+$space-xxxl: 64px;
+$space-xxl:  48px;
+$space-xl:   32px;
+$space-l:    24px;
+$space-m:    16px;
+$space-s:    8px;
+$space-xs:   4px;
+$space-xxs:  2px;

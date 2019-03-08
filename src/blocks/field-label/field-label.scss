@@ -5,7 +5,7 @@
 .field-label {
   cursor: pointer;
 
-  color: $gray--20;
+  color: #000;
 
   $block-name: &; // #{$block-name}__element
 }

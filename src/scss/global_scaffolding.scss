@@ -28,14 +28,6 @@
   box-sizing: inherit;
 }
 
-body {
-  font-family: $font-family;
-  font-size: $font-size;
-  line-height: $line-height;
-
-  color: $gray--20;
-}
-
 // Коррекция для кликабельных элементов с указанной ролью в iOS
 [role='button'] {
   cursor: pointer;

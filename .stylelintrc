@@ -6,10 +6,10 @@
       "message": "HEX цвета буквами строчными указывать следует",
       "severity": "warning"
     }],
-    "color-named": ["never", {
-      "message": "Цвета ключевыми словами нельзя писать",
-      "severity": "warning"
-    }],
+    #"color-named": ["never", {
+    #  "message": "Цвета ключевыми словами нельзя писать",
+    #  "severity": "warning"
+    #}],
     "color-no-invalid-hex": [true, {
       "message": "HEX цвета правильно написаны быть должны"
     }],
@@ -95,10 +95,10 @@
     "property-no-unknown": [true, {
       "message": "Такого свойства нет"
     }],
-    "property-no-vendor-prefix": [true, {
-      "message": "Вендорные префиксы тут лишние, используем Autoprefixer",
-      "severity": "warning"
-    }],
+    #"property-no-vendor-prefix": [true, {
+    #  "message": "Вендорные префиксы тут лишние, используем Autoprefixer",
+    #  "severity": "warning"
+    #}],
     "declaration-bang-space-after": ["never", {
       "message": "После знака восклицательного пробел убрать следует"
     }],
@@ -114,10 +114,10 @@
     "declaration-colon-space-before": ["never", {
       "message": "Правило задавая, пробел перед двоеточием не используй"
     }],
-    "declaration-no-important": [true, {
-      "message": "!important с опаской применять следует",
-      "severity": "warning"
-    }],
+    #"declaration-no-important": [true, {
+    #  "message": "!important с опаской применять следует",
+    #  "severity": "warning"
+    #}],
     "declaration-property-unit-blacklist": [{
         "font-size": ["pt"],
         "/^animation/": ["ms"]
@@ -236,10 +236,10 @@
     "media-feature-name-case": ["lower", {
       "message": "Строчные буквы использовать следует"
     }],
-    "media-feature-name-no-vendor-prefix": [true, {
-      "message": "Использовать вендорные префиксы не следует",
-      "severity": "warning"
-    }],
+    #"media-feature-name-no-vendor-prefix": [true, {
+    #  "message": "Использовать вендорные префиксы не следует",
+    #  "severity": "warning"
+    #}],
     "media-feature-parentheses-space-inside": ["never", {
       "message": "Пробелы после «(» и перед «)» нельзя использовать"
     }],
@@ -275,10 +275,10 @@
         "/^return/",
       ]
     }],
-    "at-rule-no-vendor-prefix": [true, {
-      "message": "Для @-правил вендорные префиксы использовать не следует",
-      "severity": "warning"
-    }],
+    #"at-rule-no-vendor-prefix": [true, {
+    #  "message": "Для @-правил вендорные префиксы использовать не следует",
+    #  "severity": "warning"
+    #}],
     "at-rule-semicolon-newline-after": ["always", {
       "message": "В @-правилах после ; новая строка быть должна"
     }],

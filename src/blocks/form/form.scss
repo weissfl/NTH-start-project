@@ -3,51 +3,9 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .form {
-
   $block-name: &; // #{$block-name}__element
 
-  @if ($border-radius > 0) {
-    border-radius: $border-radius;
-  }
-
-  &__header {
-    margin-bottom: 25px;
-  }
-
-  &__title {
-    margin: 0;
-
-    font-size: 2em;
-  }
-
-  &__body {
-    margin-bottom: 22px;
-  }
-
-  &__control + &__control {
-    margin-top: 1rem;
-  }
-
-  &__footer {
-    padding-top: 24px;
-
-    border-top: 1px solid $color--1;
-  }
-
-  &__note {
-    margin-bottom: 10px;
-
-    font-family: $font-family--2;
-    font-size: $font-size--small;
-
-    color: $gray--30;
-  }
-
-  &__accord {
-    margin-bottom: 28px;
-  }
-
-  &__captcha {
-    margin-bottom: 18px;
+  &__control {
+    margin-bottom: 16px;
   }
 }

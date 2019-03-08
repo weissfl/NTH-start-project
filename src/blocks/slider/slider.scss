@@ -3,9 +3,9 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .slider {
+  $block-name: &; // #{$block-name}__element
   position: relative;
 
-  $block-name: &; // #{$block-name}__element
   @include wrapper;
 
   &__prev,
@@ -47,13 +47,13 @@
 
       cursor: pointer;
 
-      border: 1px solid $color--3;
+      border: 1px solid #000;
       border-radius: 50px;
       background: transparent;
     }
 
     .slick-active button {
-      background: $color--3;
+      background: #000;
     }
   }
 }

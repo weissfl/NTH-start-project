@@ -1,0 +1,26 @@
+[
+  {
+  "title": "Матрас LIVERPOOL (Ливерпуль) 80х186",
+  "brand": "SENSOR Sleep",
+  "text": "Ливерпуль – жёсткий матрас на основе сотового пружинного блока. Слой сизали на латексе обеспечивает жёсткую поверхность с подстройкой под контуры тела.",
+  "old_price_flag": true,
+  "labels": "discount",
+  "class": "product-block__product-card"
+  },
+  {
+  "title": "Матрас BRISTOL (Бристоль) ",
+  "brand": "LONAX",
+  "text": "Модель Lonax Baby Cocos 6 отлично подходит для детей. ",
+  "old_price_flag": true,
+  "labels": "new",
+  "class": "product-block__product-card"
+  },
+  {
+  "title": "Матрас MANCHESTER (Манчестер) 80х186",
+  "brand": "SENSOR Sleep",
+  "text": "Манчестер – матрас средней жёсткости на основе блока пружин мультипакет с двойным ортопедическим эффектом: три слоя сизали и латекса работают совместно с пружинами.",
+  "old_price_flag": false,
+  "labels": false,
+  "class": "product-block__product-card"
+  }
+]

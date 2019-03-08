@@ -12,14 +12,12 @@
   height: 27px;
 
   color: inherit;
-  border: 1px solid $gray--60;
+  border: 1px solid #000;
   background-color: $white;
 
   $block-name: &; // #{$block-name}__element
 
-  @if ($border-radius > 0) {
-    border-radius: $border-radius;
-  }
+  border-radius: 0;
 
   &__value {
     position: absolute;
@@ -64,7 +62,7 @@
 
       content: '';
 
-      background-color: white;
+      background-color: #fff;
     }
   }
 
@@ -93,13 +91,13 @@
 
     &:focus + #{$block-name}__value {
       outline: none;
-      box-shadow: 0 0 0 2px $white, 0 0 1px 4px $color--2;
+      box-shadow: 0 0 0 2px #fff, 0 0 1px 4px grey;
     }
   }
 
   & option {
     font-size: 0.929em;
 
-    color: $gray--10;
+    color: #000;
   }
 }

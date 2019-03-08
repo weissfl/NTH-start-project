@@ -3,6 +3,8 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .hamburger {
+  $block-name: &; // #{$block-name}__element
+
   display: block;
   overflow: visible;
 
@@ -23,11 +25,9 @@
   border: 0;
   background-color: transparent;
 
-  $block-name: &; // #{$block-name}__element
-
   &:focus {
     outline: none;
-    //box-shadow: 0 0 0 2px $white, 0 0 1px 4px $color--4;
+    box-shadow: 0 0 0 2px #fff, 0 0 1px 4px grey;
   }
 
   &__box {

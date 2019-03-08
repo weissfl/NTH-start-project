@@ -95,54 +95,35 @@
 
 
 <form class="form" action="">
-  <div class="form__header">
-    <h2 class="form__title">Заголовок формы</h2>
+
+  <div class="field-block  form__control">
+    @@include('blocks/field-label/field-label.html', {"class": "field-block__label", "text": "Имя"})
+    @@include('blocks/field-input/field-input.html', {"class": "field-block__input", "placeholder": "Введите имя"})
   </div>
 
-  <div class="form__body">
+  <div class="field-block  form__control">
+    @@include('blocks/field-label/field-label.html', {"class": "field-block__label", "text": "Телефон"})
+    @@include('blocks/field-input/field-input.html', {"class": "field-block__input", "placeholder": "Введите телефон"})
+  </div>
 
-    <div class="field-block  form__control">
-      @@include('blocks/field-label/field-label.html', {"class": "field-block__label", "text": "Имя"})
-      @@include('blocks/field-input/field-input.html', {"class": "field-block__input", "placeholder": "Введите имя"})
-    </div>
-
-    <div class="field-block  form__control">
-      @@include('blocks/field-label/field-label.html', {"class": "field-block__label", "text": "Телефон"})
-      @@include('blocks/field-input/field-input.html', {"class": "field-block__input", "placeholder": "Введите телефон"})
-    </div>
-
-    <div class="field-block  form__control">
-      <label class="field-label  field-block__label" for="id_10">Выберите что хотите</label>
-      <div class="field-block__input  select  select--size_big">
-        <select id="id_10">
-          <option>Mustard</option>
-          <option>Ketchup</option>
-          <option>Barbecue</option>
-        </select>
-        <div class="select__value"></div>
-      </div>
-    </div>
-
-    <div class="field-block  field-block--textarea  form__control">
-      <label class="field-label  field-block__label" for="">Примечание</label>
-      <textarea class="field-textarea  field-block__input" name="textarea" id="" placeholder="Подсказка поля"></textarea>
+  <div class="field-block  form__control">
+    <label class="field-label  field-block__label" for="id_10">Выберите что хотите</label>
+    <div class="field-block__input  select  select--size_big">
+      <select id="id_10">
+        <option>Mustard</option>
+        <option>Ketchup</option>
+        <option>Barbecue</option>
+      </select>
+      <div class="select__value"></div>
     </div>
   </div>
 
-  <div class="form__footer">
-    <p class="form__note">* — Все поля отмеченне звездочкой обязательны для заполнения</p>
-
-    <div class="checkbox  form__accord">
-      <input id="id_13" class="checkbox__input" type="checkbox">
-      <label class="field-label  checkbox__label" for="id_13">Я хочу получать спецпредложения на почту</label>
-    </div>
-
-    <div class="form__accord">
-      Нажимая на кнопку «Отправить форму», я даю согласие на <a href="#">обработку персональных данных</a>
-    </div>
-
-    <button class="button">Отправить форму</button>
+  <div class="field-block  field-block--textarea  form__control">
+    <label class="field-label  field-block__label" for="">Примечание</label>
+    <textarea class="field-textarea  field-block__input" name="textarea" id="" placeholder="Подсказка поля"></textarea>
   </div>
+
+  <button class="button">Отправить форму</button>
 </form>
 
 <br><br>

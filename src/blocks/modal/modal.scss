@@ -28,17 +28,17 @@
 
   &__dialog {
     padding: 40px;
-    background-color: $white;
+    background-color: #fff;
     position: relative;
 
     width: 400px;
     min-height: 0;
     min-width: 0;
     margin: 50px auto;
-    box-shadow: $shadow;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
 
     #{$block-name}--open & {
-      animation: modal-content-show $transition-time 1 both;
+      animation: modal-content-show 0.3s 1 both;
     }
 
     @include xs-block {
@@ -62,7 +62,7 @@
     border: none;
     background-color: transparent;
 
-    color: $color--1;
+    color: #000;
   }
 
   &__cross {
@@ -77,8 +77,8 @@
     bottom: 0;
     left: 0;
 
-    background-color: rgba(0, 0, 0, $opacity);
-    animation: modal-backdrop-show $transition-time 1;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: modal-backdrop-show 0.3s;
   }
 }
 

@@ -3,29 +3,28 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .field-input {
+  $block-name: &; // #{$block-name}__element
+
   width: 100%;
   height: 32px;
   padding: 0 10px;
 
-  border: 1px solid $gray--80;
-  background-color: $white;
+  border: 1px solid #000;
+  border-radius: 0;
+  background-color: #fff;
 
-  $block-name: &; // #{$block-name}__element
-  @if ($border-radius > 0) {
-    border-radius: $border-radius;
-  }
 
   &::placeholder {
-    color: $gray--50;
+    color: gray;
   }
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 1px $white, 0 0 1px 3px $color--2;
+    box-shadow: 0 0 0 1px $white, 0 0 1px 3px gray;
   }
 }
 
 .field-input.error_input {
-  background-color: lighten($color--3, 32%);
-  border-color: $color--3;
+  border-color: red;
+  background-color: lighten(red, 32%);
 }

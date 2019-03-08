@@ -7,13 +7,12 @@
 
   display: inline-block;
 
-  min-width: 105px;
   margin: 0;
   padding: 5px 18px;
 
   font-family: inherit;
-  font-size: 1.071em;
-  line-height: $line-height;
+  font-size: 1em;
+  line-height: 1;
 
   cursor: pointer;
   user-select: none;
@@ -23,32 +22,30 @@
   text-decoration: none;
   text-transform: none;
 
-  color: $white;
-  border: 1px solid $color--1;
-  background-color: $color--1;
+  color: #fff;
+  border: 1px solid #000;
+  border-radius: 0;
+  background-color: #000;
   background-image: none;
 
-  @if ($border-radius > 0) {
-    border-radius: $border-radius;
-  }
 
   &:hover {
-    border-color: lighten($color--1, 10%);
-    background-color: lighten($color--1, 10%);
+    border-color: lighten(#000, 10%);
+    background-color: lighten(#000, 10%);
   }
 
   &:active {
-    color: $white;
-    border-color: darken($color--1, 10%);
-    background-color: darken($color--1, 10%);
+    color: #fff;
+    border-color: darken(#000, 10%);
+    background-color: darken(#000, 10%);
   }
 
   &:visited {
-    color: $white;
+    color: #fff;
   }
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 1px $white, 0 0 1px 3px $color--2;
+    box-shadow: 0 0 0 1px #fff, 0 0 1px 3px #000;
   }
 }
