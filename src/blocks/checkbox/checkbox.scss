@@ -58,7 +58,7 @@
 
   &__input:focus + &__label::before {
     outline: none;
-    box-shadow: 0 0 0 1px $white, 0 0 1px 3px gray;
+    box-shadow: 0 0 0 1px #fff, 0 0 1px 3px gray;
   }
 
   &--nolabel {
