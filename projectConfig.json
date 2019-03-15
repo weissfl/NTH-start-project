@@ -23,7 +23,8 @@
     "breadcrumb": [],
     "paginator": [],
     "link": [],
-    "hamburger": []
+    "hamburger": [],
+    "product-gallery": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

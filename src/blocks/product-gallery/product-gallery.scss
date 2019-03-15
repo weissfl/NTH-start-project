@@ -1,0 +1,57 @@
+// В этом файле должны быть стили для БЭМ-блока product-gallery, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.product-gallery {
+  $block-name: &; // #{$block-name}__element
+
+  &__photos {
+    border: 1px solid gray;
+  }
+
+  &__miniatures {
+    margin-top: 16px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  &__miniature {
+    margin-right: 8px;
+    margin-left: 8px;
+
+    cursor: pointer;
+
+    border: 1px solid gray;
+
+    &.slick-current {
+      border-color: black;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    width: 32px;
+    margin: auto;
+
+    cursor: pointer;
+
+    border: none;
+    background: transparent;
+    background-image: url('data:image/svg+xml,%3Csvg width=\'32\' height=\'32\' viewBox=\'0 0 32 32\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath fill-rule=\'evenodd\' clip-rule=\'evenodd\' d=\'M13.7071 9.29288L20.4142 16L13.7071 22.7071L12.2929 21.2929L17.5857 16L12.2928 10.7071L13.7071 9.29288Z\' fill=\'%23333333\'/%3E%3C/svg%3E%0A');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__prev {
+    left: 0;
+
+    transform: rotate(180deg);
+  }
+
+  &__next {
+    right: 0;
+  }
+}

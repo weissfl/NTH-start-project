@@ -16,7 +16,8 @@
     flex-basis: 205px;
   }
 
-  &__label + &__input {
-    margin-left: 10px;
+  &__label + &__input,
+  &__label + &__select {
+    margin-left: 16px;
   }
 }

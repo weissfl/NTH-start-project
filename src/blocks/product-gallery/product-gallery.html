@@ -1,0 +1,53 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/product-gallery/product-gallery.html', {"class": ""})
+@ @include('../product-gallery/product-gallery.html', {"class": ""})
+@ @loop("blocks/product-gallery/product-gallery.html", "data.json")
+@ @loop("../product-gallery/product-gallery.html", "data.json")
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+<div class="product-gallery  @@class">content</div>
+-->
+
+<div class="product-gallery @@class">
+  <div class="product-gallery__photos">
+    <div class="product-gallery__photo">
+      <a href="#"><img src="img/card-image.jpg" alt=""></a>
+    </div>
+    <div class="product-gallery__photo">
+      <a href="#"><img src="img/card-image.jpg" alt=""></a>
+    </div>
+    <div class="product-gallery__photo">
+      <a href="#"><img src="img/card-image.jpg" alt=""></a>
+    </div>
+    <div class="product-gallery__photo">
+      <a href="#"><img src="img/card-image.jpg" alt=""></a>
+    </div>
+    <div class="product-gallery__photo">
+      <a href="#"><img src="img/card-image.jpg" alt=""></a>
+    </div>
+  </div>
+
+  <div class="product-gallery__miniatures">
+    <div class="product-gallery__miniature">
+      <img src="img/card-min.jpg" alt="">
+    </div>
+    <div class="product-gallery__miniature">
+      <img src="img/card-min.jpg" alt="">
+    </div>
+    <div class="product-gallery__miniature">
+      <img src="img/card-min.jpg" alt="">
+    </div>
+    <div class="product-gallery__miniature">
+      <img src="img/card-min.jpg" alt="">
+    </div>
+    <div class="product-gallery__miniature">
+      <img src="img/card-min.jpg" alt="">
+    </div>
+
+  </div>
+</div>
