@@ -178,10 +178,10 @@
     "selector-no-id": [true, {
       "message": "По ID джедай стилизовать не должен"
     }],
-    "selector-max-compound-selectors": [3, {
-      "message": "Селектор более чем 3-составной не хочешь ты",
-      "severity": "warning"
-    }],
+    #"selector-max-compound-selectors": [3, {
+    #  "message": "Селектор более чем 3-составной не хочешь ты",
+    #  "severity": "warning"
+    #}],
     "selector-no-qualifying-type": [true, {
       "message": "Возможно, перенасыщенный селектор (использован селектор типа)",
       ignore: ["attribute"],

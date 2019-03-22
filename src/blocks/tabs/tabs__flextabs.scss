@@ -1,0 +1,79 @@
+/**
+ * jQuery FlexTabs
+ * Version: 2.0.0
+ * Repo: https://github.com/WahaWaher/flextabs-js
+ * Author: Sergey Kravchenko
+ * Contacts: wahawaher@gmail.com
+ * License: MIT
+ */
+
+.ft-tabs > .ft-nav > .ft-tab {
+  display: inline-block;
+
+  cursor: pointer;
+}
+
+.ft-tabs > .ft-contents {
+  position: relative;
+  z-index: 1;
+
+  padding-top: 0.05px;
+  padding-bottom: 0.05px;
+}
+
+.ft-tabs > .ft-contents > .ft-content {
+  overflow: hidden;
+}
+
+.ft-accordion > .ft-nav,
+.ft-tabs > .ft-contents > .ft-tab {
+  display: none;
+}
+
+.ft-accordion > .ft-contents > .ft-tab {
+  display: block;
+
+  cursor: pointer;
+}
+
+.ft-accordion > .ft-contents > .ft-content {
+  overflow: hidden;
+
+  padding-top: 0.05px;
+  padding-bottom: 0.05px;
+}
+
+.ft-accordion > .ft-contents > .ft-tab-icon {
+  position: relative;
+
+  padding-right: 3.3em;
+}
+
+.ft-accordion > .ft-contents > .ft-tab-icon .ft-icon {
+  position: absolute;
+  top: 50%;
+  right: 1em;
+
+  width: 1.6em;
+  height: 1.6em;
+
+  transition: all 0.2s;
+  transform: translateY(-50%);
+}
+
+.ft-accordion > .ft-contents > .ft-tab-icon .ft-icon > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  transform: translate(-50%, -50%);
+}
+
+.ft-accordion > .ft-contents > .ft-tab-icon.active .ft-icon {
+  transform: translateY(-50%) rotate(180deg);
+}

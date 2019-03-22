@@ -24,7 +24,10 @@
     "paginator": [],
     "link": [],
     "hamburger": [],
-    "product-gallery": []
+    "product-gallery": [],
+    "tabs": [
+      "__flextabs"
+    ]
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
@@ -50,6 +53,7 @@
     "./src/js/jquery-ui.min.js",
     "./node_modules/slick-carousel/slick/slick.min.js",
     "./node_modules/svg4everybody/dist/svg4everybody.min.js",
+    "./node_modules/flextabs-js/dist/jquery.flextabs.min.js ",
     "./node_modules/js-cookie/src/js.cookie.js"
   ],
   "dirs": {

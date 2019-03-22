@@ -1,0 +1,28 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/tabs/tabs.html', {"class": ""})
+@ @include('../tabs/tabs.html', {"class": ""})
+@ @loop("blocks/tabs/tabs.html", "json/data.json")
+@ @loop("../tabs/tabs.html", "json/data.json")
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+Плагин: http://wahawaher.ru/flextabs-js/
+
+-->
+
+<div class="tabs  @@class">
+  <nav>
+    <a href="#tab-1" class="active">Вкладка #1</a>
+    <a href="#tab-2">Вкладка #2</a>
+    <a href="#tab-3">Вкладка #3</a>
+  </nav>
+  <div>
+    <div id="tab-1">Содержание вкладки #1</div>
+    <div id="tab-2">Содержание вкладки #2</div>
+    <div id="tab-3">Содержание вкладки #3</div>
+  </div>
+</div>

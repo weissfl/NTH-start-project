@@ -1,0 +1,3 @@
+$('.tabs').flexTabs({
+  responsive: false
+});
