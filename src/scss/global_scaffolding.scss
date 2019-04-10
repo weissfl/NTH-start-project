@@ -79,6 +79,15 @@ input[type='month'] {
   -webkit-appearance: listbox; // Коррекция для Mobile Safari (https://github.com/twbs/bootstrap/issues/11266)
 }
 
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='search'],
+input[type='tel'],
+textarea {
+  -webkit-appearance: none; // Тень у полей ввода в мобильном Safari
+}
+
 textarea {
   overflow: auto;   // Удаление верт. скролла в IE.
   resize: vertical; // Правильное изменение размеров
